@@ -24,7 +24,6 @@ public class Location {
 
     @Override
     public String toString() {
-
         return value;
     }
 
@@ -38,7 +37,6 @@ public class Location {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(getId());
     }
 
