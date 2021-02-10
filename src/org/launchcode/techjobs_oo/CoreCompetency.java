@@ -21,6 +21,7 @@ public class CoreCompetency {
 
     @Override
     public String toString() {
+
         return value;
     }
 
@@ -34,6 +35,7 @@ public class CoreCompetency {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(id);
     }
 
