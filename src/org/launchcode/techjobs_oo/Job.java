@@ -31,14 +31,81 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+    //TODO: Add custom toString method
+    @Override
+    public String toString() {
+        String labelAndValue =
+                "\n" + "ID: " + this.getId() +
+                "\n" + "Name: " + this.getName() +
+                "\n" + "Employer: " + this.getEmployer() +
+                "\n" + "Location: " + this.getLocation() +
+                "\n" + "Position Type: " + this.getPositionType() +
+                "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+
+//      TODO: second iteration better if statement
+
+        if(this.name.isBlank() && this.employer.getValue().isBlank() && this.location.getValue().isBlank() && this.positionType.getValue().isBlank() && this.coreCompetency.getValue().isBlank()) {
+            labelAndValue =
+                    "\n" + "ID: " + this.getId() +
+                            "\n" + "Name: " + "Data not available" +
+                            "\n" + "Employer: " + "Data not available" +
+                            "\n" + "Location: " + "Data not available" +
+                            "\n" + "Position Type: " + "Data not available" +
+                            "\n" + "Core Competency: " + "Data not available" + "\n";
+
+        }else if(!this.name.isBlank() && !this.employer.getValue().isBlank() && !this.location.getValue().isBlank() && !this.positionType.getValue().isBlank() && !this.coreCompetency.getValue().isBlank()) {
+            labelAndValue = "\n" + "ID: " + this.getId() +
+                    "\n" + "Name: " + this.getName() +
+                    "\n" + "Employer: " + this.getEmployer() +
+                    "\n" + "Location: " + this.getLocation() +
+                    "\n" + "Position Type: " + this.getPositionType() +
+                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+
+        }else if(this.name.isBlank()){
+            labelAndValue = "\n" + "ID: " + this.getId() +
+                    "\n" + "Name: " + "Data not available" +
+                    "\n" + "Employer: " + this.getEmployer() +
+                    "\n" + "Location: " + this.getLocation() +
+                    "\n" + "Position Type: " + this.getPositionType() +
+                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+
+        }else if(this.employer.getValue().isBlank()){
+            labelAndValue = "\n" + "ID: " + this.getId() +
+                    "\n" + "Name: " + this.getName() +
+                    "\n" + "Employer: " + "Data not available" +
+                    "\n" + "Location: " + this.getLocation() +
+                    "\n" + "Position Type: " + this.getPositionType() +
+                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+
+        }else if(this.location.getValue().isBlank()){
+            labelAndValue = "\n" + "ID: " + this.getId() +
+                    "\n" + "Name: " + this.getName() +
+                    "\n" + "Employer: " + this.getEmployer() +
+                    "\n" + "Location: " + "Data not available" +
+                    "\n" + "Position Type: " + this.getPositionType() +
+                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+
+        }else if(this.positionType.getValue().isBlank()){
+            labelAndValue = "\n" + "ID: " + this.getId() +
+                    "\n" + "Name: " + this.getName() +
+                    "\n" + "Employer: " + this.getEmployer() +
+                    "\n" + "Location: " + this.getLocation() +
+                    "\n" + "Position Type: " + "Data not available" +
+                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+        }else{
+            labelAndValue = "\n" + "ID: " + this.getId() +
+                    "\n" + "Name: " + this.getName() +
+                    "\n" + "Employer: " + this.getEmployer() +
+                    "\n" + "Location: " + this.getLocation() +
+                    "\n" + "Position Type: " + this.getPositionType() +
+                    "\n" + "Core Competency: " + "Data not available" + "\n";
+        }
+
+        return labelAndValue;
+    }
+
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
-
-    //TODO: Add custom toString method
-//    @Override
-//    public String toString() {
-//        return value;
-//    }
 
     @Override
     public boolean equals(Object o) {
@@ -56,7 +123,6 @@ public class Job {
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
-
 
     public int getId() {
         return id;
