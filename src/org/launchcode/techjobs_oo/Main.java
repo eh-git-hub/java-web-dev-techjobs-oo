@@ -9,7 +9,7 @@ public class Main {
         Job job2 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
         Job job3 = new Job("Ice cream taster", new Employer(""), new Location("Home"), new PositionType("UX"), new CoreCompetency("Taste"));
 
-//        Job jobTest1 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+//        Job jobTest1 = new Job("Super Hero", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
 //        Job jobTest2 = new Job("Video Producer", new Employer("Donut Media"), new Location("Los Angeles, CA"), new PositionType("Video Producer"), new CoreCompetency("Make car videos"));
 //        Job jobTest3 = new Job("", new Employer("Donut Media"), new Location("Los Angeles, CA"), new PositionType("Video Producer"), new CoreCompetency("Make car videos"));
 //        Job jobTest4 = new Job("High School Teacher", new Employer(""), new Location("Rogers, AR"), new PositionType("Teacher"), new CoreCompetency("Teach"));
@@ -25,6 +25,7 @@ public class Main {
         for (Job job : jobs){
             System.out.println(job);
         }
+
 
 //        System.out.println(jobTest1.toString());
 //        System.out.println(jobTest2.toString());

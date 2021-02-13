@@ -34,72 +34,102 @@ public class Job {
     //TODO: Add custom toString method
     @Override
     public String toString() {
-        String labelAndValue =
-                "\n" + "ID: " + this.getId() +
-                "\n" + "Name: " + this.getName() +
-                "\n" + "Employer: " + this.getEmployer() +
-                "\n" + "Location: " + this.getLocation() +
-                "\n" + "Position Type: " + this.getPositionType() +
-                "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
 
-//      TODO: second iteration better if statement
-
-        if(this.name.isBlank() && this.employer.getValue().isBlank() && this.location.getValue().isBlank() && this.positionType.getValue().isBlank() && this.coreCompetency.getValue().isBlank()) {
-            labelAndValue =
-                    "\n" + "ID: " + this.getId() +
-                            "\n" + "Name: " + "Data not available" +
-                            "\n" + "Employer: " + "Data not available" +
-                            "\n" + "Location: " + "Data not available" +
-                            "\n" + "Position Type: " + "Data not available" +
-                            "\n" + "Core Competency: " + "Data not available" + "\n";
-
-        }else if(!this.name.isBlank() && !this.employer.getValue().isBlank() && !this.location.getValue().isBlank() && !this.positionType.getValue().isBlank() && !this.coreCompetency.getValue().isBlank()) {
-            labelAndValue = "\n" + "ID: " + this.getId() +
-                    "\n" + "Name: " + this.getName() +
-                    "\n" + "Employer: " + this.getEmployer() +
-                    "\n" + "Location: " + this.getLocation() +
-                    "\n" + "Position Type: " + this.getPositionType() +
-                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
-
-        }else if(this.name.isBlank()){
-            labelAndValue = "\n" + "ID: " + this.getId() +
-                    "\n" + "Name: " + "Data not available" +
-                    "\n" + "Employer: " + this.getEmployer() +
-                    "\n" + "Location: " + this.getLocation() +
-                    "\n" + "Position Type: " + this.getPositionType() +
-                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
-
-        }else if(this.employer.getValue().isBlank()){
-            labelAndValue = "\n" + "ID: " + this.getId() +
-                    "\n" + "Name: " + this.getName() +
-                    "\n" + "Employer: " + "Data not available" +
-                    "\n" + "Location: " + this.getLocation() +
-                    "\n" + "Position Type: " + this.getPositionType() +
-                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
-
-        }else if(this.location.getValue().isBlank()){
-            labelAndValue = "\n" + "ID: " + this.getId() +
-                    "\n" + "Name: " + this.getName() +
-                    "\n" + "Employer: " + this.getEmployer() +
-                    "\n" + "Location: " + "Data not available" +
-                    "\n" + "Position Type: " + this.getPositionType() +
-                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
-
-        }else if(this.positionType.getValue().isBlank()){
-            labelAndValue = "\n" + "ID: " + this.getId() +
-                    "\n" + "Name: " + this.getName() +
-                    "\n" + "Employer: " + this.getEmployer() +
-                    "\n" + "Location: " + this.getLocation() +
-                    "\n" + "Position Type: " + "Data not available" +
-                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
-        }else{
-            labelAndValue = "\n" + "ID: " + this.getId() +
-                    "\n" + "Name: " + this.getName() +
-                    "\n" + "Employer: " + this.getEmployer() +
-                    "\n" + "Location: " + this.getLocation() +
-                    "\n" + "Position Type: " + this.getPositionType() +
-                    "\n" + "Core Competency: " + "Data not available" + "\n";
+        if(name.isBlank()){
+            name = ("Data not available");
         }
+
+        if(employer.getValue().isBlank()){
+            employer.setValue("Data not available");
+        }
+
+        if(location.getValue().isBlank()){
+            location.setValue("Data not available");
+        }
+
+        if(positionType.getValue().isBlank()){
+            positionType.setValue("Data not available");
+        }
+
+        if(coreCompetency.getValue().isBlank()) {
+            coreCompetency.setValue("Data not available");
+        }
+
+
+//        if(this.name.isBlank() && this.employer.getValue().isBlank() && this.location.getValue().isBlank() && this.positionType.getValue().isBlank() && this.coreCompetency.getValue().isBlank()) {
+//            labelAndValue =
+//                    "\n" + "ID: " + this.getId() +
+//                            "\n" + "Name: " + "Data not available" +
+//                            "\n" + "Employer: " + "Data not available" +
+//                            "\n" + "Location: " + "Data not available" +
+//                            "\n" + "Position Type: " + "Data not available" +
+//                            "\n" + "Core Competency: " + "Data not available" + "\n";
+//
+//        }if(!this.name.isBlank() && !this.employer.getValue().isBlank() && !this.location.getValue().isBlank() && !this.positionType.getValue().isBlank() && !this.coreCompetency.getValue().isBlank()) {
+//            labelAndValue = "\n" + "ID: " + this.getId() +
+//                    "\n" + "Name: " + this.getName() +
+//                    "\n" + "Employer: " + this.getEmployer() +
+//                    "\n" + "Location: " + this.getLocation() +
+//                    "\n" + "Position Type: " + this.getPositionType() +
+//                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+//
+//        }if(!this.name.isBlank() && this.employer.getValue().isBlank() && this.location.getValue().isBlank() && this.positionType.getValue().isBlank() && this.coreCompetency.getValue().isBlank()){
+//            labelAndValue = "\n" + "ID: " + this.getId() +
+//                    "\n" + "Name: " + "Data not available" +
+//                    "\n" + "Employer: " + "Data not available" +
+//                    "\n" + "Location: " + "Data not available" +
+//                    "\n" + "Position Type: " + "Data not available" +
+//                    "\n" + "Core Competency: " + "Data not available" + "\n";
+//        }
+
+//        if(this.name.isBlank()){
+//            labelAndValue = "\n" + "ID: " + this.getId() +
+//                    "\n" + "Name: " + "Data not available" +
+//                    "\n" + "Employer: " + this.getEmployer() +
+//                    "\n" + "Location: " + this.getLocation() +
+//                    "\n" + "Position Type: " + this.getPositionType() +
+//                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+//
+//        }if(this.employer.getValue().isBlank()){
+//            labelAndValue = "\n" + "ID: " + this.getId() +
+//                    "\n" + "Name: " + this.getName() +
+//                    "\n" + "Employer: " + "Data not available" +
+//                    "\n" + "Location: " + this.getLocation() +
+//                    "\n" + "Position Type: " + this.getPositionType() +
+//                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+//
+//        }if(this.location.getValue().isBlank()){
+//            labelAndValue = "\n" + "ID: " + this.getId() +
+//                    "\n" + "Name: " + this.getName() +
+//                    "\n" + "Employer: " + this.getEmployer() +
+//                    "\n" + "Location: " + "Data not available" +
+//                    "\n" + "Position Type: " + this.getPositionType() +
+//                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+//
+//        }if(this.positionType.getValue().isBlank()){
+//            labelAndValue = "\n" + "ID: " + this.getId() +
+//                    "\n" + "Name: " + this.getName() +
+//                    "\n" + "Employer: " + this.getEmployer() +
+//                    "\n" + "Location: " + this.getLocation() +
+//                    "\n" + "Position Type: " + "Data not available" +
+//                    "\n" + "Core Competency: " + this.getCoreCompetency() + "\n";
+//
+//        }if(this.coreCompetency.getValue().isBlank()){
+//            labelAndValue = "\n" + "ID: " + this.getId() +
+//                    "\n" + "Name: " + this.getName() +
+//                    "\n" + "Employer: " + this.getEmployer() +
+//                    "\n" + "Location: " + this.getLocation() +
+//                    "\n" + "Position Type: " + this.getPositionType() +
+//                    "\n" + "Core Competency: " + "Data not available" + "\n";
+//        }
+
+       String labelAndValue =
+                "\n" + "ID: " + this.getId() +
+                        "\n" + "Name: " + name +
+                        "\n" + "Employer: " + employer +
+                        "\n" + "Location: " + location +
+                        "\n" + "Position Type: " + positionType +
+                        "\n" + "Core Competency: " + coreCompetency + "\n";
 
         return labelAndValue;
     }

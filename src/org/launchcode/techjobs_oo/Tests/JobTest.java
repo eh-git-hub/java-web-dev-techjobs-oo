@@ -79,12 +79,13 @@ public class JobTest {
         Job superHero2 = new Job("Super Hero", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
 
         String labelAndValue =
-                "\n" + "ID: "  + "1" +
-                        "\n" + "Name: " + "Super Hero" +
+                "\n" + "ID: " + superHero2.getId() +
+                        "\n" + "Name: " + superHero2.getName() +
                         "\n" + "Employer: " + "Data not available" +
                         "\n" + "Location: " + "Data not available" +
                         "\n" + "Position Type: " + "Data not available" +
                         "\n" + "Core Competency: " + "Data not available" + "\n";
+
         assertEquals(labelAndValue, superHero2.toString());
 
     }
